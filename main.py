@@ -25,7 +25,9 @@ if __name__ == "__main__":
     while True:
         try:
             print()
-            sentence = input(" Enter a sentence to translate: ")
+            sentence = input(" Enter a sentence to translate, or enter 'Q' to quit: ")
+            if sentence == "Q":
+                break
             print()
             print("Choose which translator to use: ")
             print(" 1) Yoda     2) Gungan     3) Groot")
