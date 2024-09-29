@@ -15,6 +15,12 @@ def gungan(sentence):
     new_sentence = " ".join(words) + ", sa!"
     return new_sentence
 
+def groot(sentence):
+    num_words = len(sentence.split())
+    num_groot_words = num_words//3
+    new_sentence = "I am Groot. " * num_groot_words
+    return new_sentence
+
 if __name__ == "__main__":
     while True:
         try:
@@ -22,7 +28,7 @@ if __name__ == "__main__":
             sentence = input(" Enter a sentence to translate: ")
             print()
             print("Choose which translator to use: ")
-            print(" 1) Yoda     2) Gungan")
+            print(" 1) Yoda     2) Gungan     3) Groot")
             print()
             choice = input("Enter your choice: ")
             print()
@@ -30,6 +36,8 @@ if __name__ == "__main__":
                 print(translate(sentence, yoda))
             elif choice == "2":
                 print(translate(sentence, gungan))
+            elif choice == "3":
+                print(translate(sentence, groot))
             else:
                 print("Invalid choice. Please try again.")
                 
