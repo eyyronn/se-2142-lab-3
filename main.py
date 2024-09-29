@@ -11,7 +11,7 @@ def gungan(sentence):
     words = sentence.split()
     for i, word in enumerate(words):
         if i % 4 == 0:
-            word[i] = word + "sa"
+            words[i] = word + "sa"
     new_sentence = " ".join(words) + ", sa!"
     return new_sentence
 
